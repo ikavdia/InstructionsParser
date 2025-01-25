@@ -1,0 +1,50 @@
+a, b, c, d, e, f; 
+{   
+    input a;
+    d = 1; 
+    e = 2; 
+    SWITCH a {
+        CASE 1:{
+            input b; 
+            FOR (c = 1; c < 5; c = c + 1; ){
+                b = b * 2; 
+                output b; 
+            }
+            a = 2;
+            SWITCH a { 
+                CASE 1: {
+                    output a;
+                }
+                DEFAULT : {
+                    IF d > e {
+                        d = d * 2;
+                        output d; 
+                    }
+                    IF d < e {
+                        e = e * 2;
+                        output e; 
+                        d = 5; 
+                        e = 6; 
+                    }
+                }
+            }
+        }
+    }
+
+    WHILE d > 2{
+        WHILE e > 1 {
+            f = d * e; 
+            output f; 
+            e = e - 1; 
+        }
+        d = d - 1;
+    }
+
+    output a; 
+    output b; 
+    output c; 
+    output d; 
+    output e; 
+    output f; 
+}
+1 1 1 1
